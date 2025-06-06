@@ -26,21 +26,6 @@ a:hover {
   opacity: 0.8;
 }
 
-/* !!!!!!!!!!!!!!! */
-
-/* .layer::before {
-    content: url('NOEMI_Modern_ru_Photopea.png');
-    position: absolute;
-    z-index: 100;
-    top: 0;
-    left: 50%;
-    transform: translatex(-50%);
-    width: 1660px;
-  
-    opacity: 0.3;
-    pointer-events: none;
-  } */
-
 /* Header */
 
 .header {
