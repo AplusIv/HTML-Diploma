@@ -1,0 +1,788 @@
+/* Первичный макет без учёта правок. 2020. https://codepen.io/aplusiv/pen/GRJNJPo?editors=1100 */
+
+
+@font-face {
+    font-family: "Open Sans";
+    src: url(https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Regular.woff);
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "Open Sans";
+    src: url(https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Bold.woff);
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 22px;
+    color: #0f0d0e;
+  }
+
+  a:hover {
+    opacity: 0.8;
+  }
+  
+/* !!!!!!!!!!!!!!! */
+
+  .layer::before {
+    content: url('NOEMI_Modern_ru_Photopea.png');
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 50%;
+    transform: translatex(-50%);
+    width: 1660px;
+    /* height: 3207px; */
+
+    /* background-image: url('NOEMI_Modern_ru_Photopea.png'); */
+  
+    opacity: 0.3;
+    pointer-events: none;
+  }
+  
+  /* body::after {
+    content: url(https://camo.githubusercontent.com/b4c2964740f770332cf2c4a8e47571a1c51495ce/68747470733a2f2f6e65746f6c6f67792d636f64652e6769746875622e696f2f68746d6c2d322d6469706c6f6d612f736f75726365732f4e4f454d495f4d6f6465726e2e6a7067);
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 50%;
+    transform: translatex(-50%);
+    width: 1660px;
+  
+    opacity: 0.3;
+    pointer-events: none;
+  } */
+  
+  /* div {
+    outline: 1px solid red;
+  }
+  
+  li {
+    outline: 1px solid blue;
+  }
+  
+  article {
+    outline: 1px solid green;
+  }
+  
+  nav {
+    outline: 1px solid red;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4 {
+    outline: 1px dashed purple;
+  }
+  
+  aside {
+    outline: 1px dotted yellow;
+  }
+   */
+  .header {
+    position: relative;
+  
+    /*   height: 449px; */
+  
+    background-color: #000000;
+    background-image: url(https://netology-code.github.io/html-2-diploma/sources/images/banner-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    min-width: 1200px;
+    padding-top: 30px; /* !!! */
+    padding-bottom: 105px;
+    color: #ffffff;
+  }
+  
+  .header::before {
+    content: "";
+  
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  
+    background-color: #000000;
+    opacity: 0.6;
+  }
+  
+  .container {
+    position: relative; 
+
+    box-sizing: border-box;
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  .header-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* .logo {
+    position: relative;
+    display: block;
+  } */
+  
+  /* Логотип решил спозиционировать абсолютно. Меня смутила направляющая в макете, которая выровнена по нижней границе пунктов меню. Поэтому выравнивал сначала меню. */
+  
+  .logo-pic {
+    /* position: absolute;
+    left: 2px;
+    bottom: -10px;
+  
+    display: block; */
+    width: 180px;
+    /* height: 40px; */
+  }
+  
+  .menu {
+    /* padding-top: 40px; */
+    font-size: 13px;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+
+
+
+  
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+
+  
+
+  
+   
+  .menu-list {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    /* flex-direction: row;
+    justify-content: flex-end;
+    align-items: baseline; */
+  }
+  
+  .menu-list-item:nth-child(n + 2) {
+    margin-left: 35px;
+  }
+  
+  .menu-link {
+    /* text-decoration: none; */
+    /* font-family: "Open Sans", Arial, sans-serif;
+    font-weight: 400; */
+    /* color: inherit; */
+  }
+
+  .tag-link {
+    text-decoration: none;
+    color: inherit;    
+    /* font-size: 14px;
+    line-height: 1.2;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #b59f5b; */
+  }
+  
+  .main-title {
+    width: 690px;
+    margin: 100px auto 20px;
+    /* padding: 115px 0 125px; */
+  
+    font-size: 45px;
+    line-height: 75px;
+    text-transform: uppercase;
+    font-weight: 700;
+    /* font-family: "Open Sans", Arial, sans-serif; */
+    text-align: center;
+    color: inherit;
+  }
+  
+  .main-page {
+    display: flex;
+    justify-content: space-between;
+    
+    margin-top: 64px;
+    margin-bottom: 65px; /*  !!! 70px*/
+  }
+  
+  /* Основной контент и сайдбар*/
+  
+  .main-page-content {
+    width: 778px;
+  }
+  
+  .sidebar {
+    width: 270px;
+  }
+  
+  /* Левая колонка */
+  
+  .article {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .article:nth-child(n + 2) {
+    margin-top: 59px;
+  }
+  
+  .article:nth-child(n + 4) {
+    margin-top: 61px;
+  }
+  
+  /* .article-preview {
+    margin-right: 30px;
+  } */
+  
+  .article-pic {
+    display: block;
+    width: 381px;
+    background-color: #eff6f1;
+  }
+  
+  .article-text {
+    width: 367px;
+  }
+  
+  .chosen-tags {
+    margin-bottom: 5px; /*финальное выравнивание внутри статей*/
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #b59f5b;
+  }
+  
+  .tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .tag-list-item {
+    display: block;
+    margin-right: 20px;
+    margin-bottom: 2px;
+  }
+  
+  .tag-list-item:last-child {
+    margin-right: 0;
+  }
+
+  .article-title {
+    margin-top: 0;
+    margin-bottom: 28px; /*финальное выравнивание внутри статей*/
+  
+    font-size: 20px;
+    line-height: 24px;
+    color: #0f0d0e;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  /* .article-title-link {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: inherit;
+  } */
+  
+  .article-info {
+    display: flex;
+    margin-bottom: 48px; /* 46px финальное выравнивание внутри статей*/
+    font-size: 12px;
+    line-height: 1.2;
+  }
+  
+  .article-author {
+    /* color: #000000; */
+    /* font-family: "Open Sans", Arial, sans-serif; */
+    /* display: inline-block; */
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .article-date {
+    /* display: inline-block; */
+    margin-right: 12px;
+  
+    color: #888888;
+    /* font-family: "Open Sans", Arial, sans-serif;
+    font-weight: 400; */
+  }
+  
+  .article-desc {
+    font-size: 15px;
+    line-height: 22px;
+    /* color: #0f0d0e; */
+  }
+  
+  /* Sidebar */
+  
+  .sidebar-block:nth-child(n + 2) {
+    margin-top: 59px; /* !! 60px */
+  }
+  /* .sidebar section:last-child {
+    margin-top: 58px;
+  }
+  .sidebar section:first-child {
+    margin-top: 0;
+  } */
+  
+  .sidebar-title {
+    /*   Можно ли задавать отрицательные марджины? Нпр, margin-top: -3px. Или это не рекомендуется? Заголовки на пару пикселей ниже, чем должны быть на макете. Я частично справился с этим уменьшив высоту строки, учитывая что названия разделов  однострочные, думаю, это допустимо. */
+    margin-top: 0;
+    margin-bottom: 20px; /* было 25px*/
+    font-size: 14px;
+    line-height: 1.2;
+    text-align: center;
+    text-transform: uppercase;
+    /* color: #0f0d0e; */
+    font-weight: 700;
+  }
+  
+  .sidebar-title::after {
+    content: "";
+  
+    display: block;
+    margin: 12px auto 0;
+    width: 66px;
+    height: 3px;
+    background-color: #e1d9bd;
+    opacity: 0.4;
+  }
+  
+  .last-article {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 22px; /* !! 20px*/
+  }
+  
+  /* .last-article:first-of-type {
+    margin-top: 28px;
+  } */
+  
+  .last-article-pic {
+    display: block;
+    width: 70px;
+    background-color: #f4f7f6;
+  }
+  
+  .last-article-desc {
+    width: 184px;
+  }
+  
+  .last-article-date {
+    font-size: 12px;
+    line-height: 1.2;
+    /* color: #000000; */
+  
+    vertical-align: top;
+  }
+  
+  .last-article-title {
+    /* margin-top: -3px;  */
+    /* финальное выравнивание. Пришлось прибегнуть к отрицательному марджину. Спрашивал вас о нём выше */
+    margin-top: 0;
+    margin-bottom: 0;
+
+    font-size: 14px;
+    line-height: 18px;
+    /* color: #000000; */
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  
+  /* .last-article-title-link {
+    text-decoration: none;
+    color: #000000;
+  } */
+  
+  .search-form {
+    position: relative;
+    display: flex;
+  }
+  
+  /* .search-form:focus {
+    outline: 1px solid #b59f5b;
+    outline-offset: 5px;
+  } */
+  /* Для скрытия всех нужных элементов использовал общий класс. В html для необходимости прописал каждому оригинальный дополнительно. Лучше скрывать по отдельности или так оставить?  */
+  
+  .visually-hidden {
+    width: 1px;
+    height: 1px;
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute;
+  }
+  
+  /* .form-row {
+    position: relative;
+    display: flex;
+  } */
+  
+  .typing-field {
+    /* width: 270px; */
+    /* width: 222px; */
+    /* height: 48px; */
+    min-height: 48px;
+    padding: 5px 18px;
+    /* padding-left: 18px;
+    padding-right: 18px; */
+  
+    font-size: 13px;
+    line-height: 1.2;
+    color: #000000;
+    font-family: "Open Sans", Arial, sans-serif;
+    /* font-weight: 400; */
+    background-color: #f4f7f6;
+    border: none;
+  }
+
+  .typing-field:focus {
+    /* background-color: #c0ca8e; */
+    border: 0;
+    background-color: #f4ce49;
+  }
+  
+  .search-field {
+    width: 222px;
+  }
+  /* .search-field:focus {
+    outline: 1px solid #b59f5b;
+    outline-offset: 5px;
+  } */
+
+  .btn {
+    height: 48px;
+    background-color: #b59f5b;
+    border: none;  
+    cursor: pointer;
+  }
+
+  .search-btn {
+    /* position: absolute; */
+    /* display: block; */
+    /* top: 0;
+    right: 0; */
+  
+    width: 48px;
+    /* height: 48px; */
+  
+    background-image: url(https://netology-code.github.io/html-2-diploma/sources/images/search.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 18px;
+    /* background-color: #b59f5b;
+    border: none;
+  
+    cursor: pointer; */
+  }
+  
+  /* .search-btn:focus {
+    background-color: #f4ce49;
+    outline: none;
+  } */
+  
+  .btn:hover {
+    opacity: 0.8;
+  } /*Общее свойство для кнопок*/
+  
+  /* Форма для рассылки */
+  
+  /* .subscribtion-form {
+    margin-top: 23px;
+  } */
+  
+  .subscribtion-form-row:nth-child(n + 2) {
+    margin-top: 15px;
+  }
+  
+  /* .subscribtion-field {
+    box-sizing: border-box;
+    width: 270px;
+    height: 48px;
+    padding-left: 18px;
+    padding-right: 18px;
+  
+    font-size: 13px;
+    line-height: 1.2;
+    font-family: "Open Sans", Arial, sans-serif;
+    font-weight: 400;
+  
+    border: none;
+    color: #000000;
+    background-color: #f4f7f6;
+  } */
+
+  .subscribtion-field {
+    box-sizing: border-box;
+    width: 270px;
+  }
+
+  /* .subscribtion-field:focus {
+    outline: 1px solid #b59f5b;
+    outline-offset: 5px;
+  } */
+  
+  .subscribe-btn {
+    width: 270px;
+    /* height: 48px; */
+  
+    font-size: 14px;
+    line-height: 1.2;
+    font-family: "Open Sans", Arial, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    /* text-align: center; */
+  
+    color: #ffffff;
+    /* border: none;
+    background-color: #b59f5b;
+  
+    cursor: pointer; */
+  }
+  
+  .subscribe-btn:focus {
+    background-color: #f4ce49;
+    outline: none;
+  }
+  
+  /*Теги*/
+  
+  /* .tags-container {
+    margin-top: 24px;
+  } */
+  
+  .all-tags-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+
+    padding: 0;
+    margin: 0;
+
+    list-style-type: none;
+  }
+  
+  /* .all-tags-list-item {
+    box-sizing: border-box;
+    display: block;
+  
+    padding: 5px 13px;
+  
+    background-color: rgba(244, 243, 241, 0);
+    border: 3px solid #eeeeee;
+  } */
+  
+  /* .all-tags-list-item:hover {
+    opacity: 0.3;
+  } */
+  
+  .all-tags {
+    box-sizing: border-box;
+    display: block;
+  
+    padding: 5px 13px;
+  
+    font-size: 12px;
+    /* font-family: "Open Sans", Arial, sans-serif; */
+    font-weight: 700;
+    /* color: #0f0d0e; */
+    line-height: 1.2;
+
+    background-color: rgba(244, 243, 241, 0);
+    border: 3px solid #eeeeee;
+    text-transform: uppercase;
+  }
+  
+  .all-tags:hover {
+    opacity: 0.8;
+  }
+  
+  .all-tags-list-item {
+    margin-bottom: 5px;
+    margin-right: 5px;
+  }
+
+  .all-tags-list-item:last-child {
+    margin-right: 0;
+  }
+
+  /* .all-tags-list-item:nth-child(n + 4) {
+    margin-top: 6px;
+  }
+  
+  .all-tags-list-item:nth-child(3n + 2) {
+    margin-left: 6px;
+    margin-right: 6px;
+  } */
+  
+
+
+  /* Блок "Категории". Не получается выровнять строчные элементы с классами categories-link и categories-total (ни относительно родителя, ни относительно друг друга). Я никак не могу разобраться в этом по всему макету. Обычно, в подобных случаях, задаю display: block и подгоняю ширину паддингами к макетной. Как работать со строчными элементами? Насколько это верный подход? Результат он даёт, но, может быть, вы порекомендуете что-нибудь более изящное. Единственное, как я могу регулировать их вертикальные размеры - это увеличивать/уменьшать высоту строки. Но для однострочных элементов нам говорили брать line-height: 1.2. Поэтому с этим не разгуляешься:) Вообще строчные элементы даются пока с трудом. Я путаюсь в границах употребления свойства vertical-align. Хочу применить, а оно не работает, зачастую. Не могли бы вы мне как-то разъяснить про это свойство. А то я сколько не читал - всё время делаю ошибки, когда нужно и можно применить. 
+  
+  Всё же у меня получилось приподнять количество категорий (класс categories-total) только после задания нового значения display: inline-block. По макету они располагаются пикселя на 3 выше наименования категорий. В данном случае можно было выкрутиться, оставив оба элемента строчными? */
+  
+  /* .categories-container {
+    margin-top: 10px;
+
+  } */
+  
+  .categories-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .categories-list-item {
+    display: block;
+    /* padding: 15px 0 16px; */
+    /*   margin-bottom: 28px; */    
+    margin-top: 10px;
+    padding-bottom: 15px;
+    font-size: 14px;
+    /*   line-height: 47px; */
+    line-height: 1.2;
+    /* font-family: "Open Sans", Arial, sans-serif; */
+    font-weight: 700;
+  
+    border-bottom: 1px solid #eeeeee;
+  }
+  
+  /* .categories-link {
+    text-decoration: none;
+    color: #000000;
+  } */
+  
+  .categories-total {
+    display: inline-block;
+    margin-left: 2px;
+  
+    font-size: 12px;
+    line-height: 1.2;
+    color: #b59f5b;
+    font-family: "Open Sans", Arial, sans-serif;
+    font-weight: 700;
+  
+    /* vertical-align: top; Здесь вот, например, сработал vertical-align. Поднял блок относительно линии текста рядом. В общем, плаваю я немного в строчных элементах и в частности в свойстве vertical-align. */
+  }
+  
+  /* Футер */
+  
+  /* footer {
+    box-sizing: border-box;
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  } */
+
+  .footer {
+    padding-bottom: 15px;
+  }
+
+  .socials {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #f4f7f6;
+  }
+  .socials-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+
+  .socials-list-item:nth-child(n + 2) {
+    margin-left: 25px;
+  }
+
+  /* .socials-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  } */
+
+  .socials-icon-link {
+    display: block;
+    width: 22px;
+    height: 22px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  .tw-link {
+    /* width: 26px;
+    height: 26px; */
+    background-image: url(https://netology-code.github.io/html-2-diploma/sources/images/social/004-twitter.svg);
+    /* background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center; */
+  }
+  .pint-link {
+    background-image: url(https://netology-code.github.io/html-2-diploma/sources/images/social/001-pinterest.svg);
+    /* background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center center; */
+  }
+  .fb-link {
+    background-image: url(https://netology-code.github.io/html-2-diploma/sources/images/social/002-facebook-logo.svg);
+    /* background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center; */
+  }
+  .inst-link {
+    background-image: url(https://netology-code.github.io/html-2-diploma/sources/images/social/005-instagram.svg);
+    /* background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: center center; */
+  }
+  .tumb-link {
+    background-image: url(https://netology-code.github.io/html-2-diploma/sources/images/social/003-tumblr.svg);
+    /* background-size: auto;
+  
+    background-repeat: no-repeat;
+    background-position: center center; */
+  }
+
+  /* copyright */
+  
+  .copyright-footer {
+    margin-top: 70px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.2;    
+  }
+  .copyright-footer-link {    
+    /* font-family: "Open Sans", Arial, sans-serif; */    
+    text-decoration: none;
+    font-weight: 700;
+    color: #999999;
+    /* vertical-align: top; */
+  }
+  
